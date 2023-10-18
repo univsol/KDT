@@ -21,12 +21,11 @@ KDT
 │   ├── config.py
 │   ├── __init__.py
 │   ├── kgs
-│   │   ├── CnDbpedia.spo
-│   │   ├── HowNet.spo
+│   │   ├── Symptom.spo
 │   │   └── Medical.spo
 │   └── knowgraph.py
 ├── datasets
-│   ├── book_review
+│   ├── medicalQA
 │   │   ├── dev.tsv
 │   │   ├── test.tsv
 │   │   └── train.tsv
@@ -55,19 +54,19 @@ KDT
 
 Run example on Book review with CnDbpedia:
 ```sh
-CUDA_VISIBLE_DEVICES='0' python3 -u run_kbert_cls.py \
+CUDA_VISIBLE_DEVICES='0' python3 -u run_bert_cls.py \
     --pretrained_model_path ./models/google_model.bin \
     --config_path ./models/google_config.json \
     --vocab_path ./models/google_vocab.txt \
     --train_path ./datasets/medicalQA/train.tsv \
     --dev_path ./datasets/medicalQA/dev.tsv \
     --test_path ./datasets/medicalQA/test.tsv \
-    --epochs_num 5 --batch_size 32 --kg_name Symptom \
+    --epochs_num 50 --batch_size 32 --kg_name Symptom \
     --output_model_path ./outputs/kbert_medicalQA_cls_Medical.bin
 #    > ./outputs/kbert_medical_ner_Medical.log 2>&1 &
 ```
 
-Options of ``run_kbert_cls.py``:
+Options of ``run_kdt_cls.py``:
 ```
 useage: [--pretrained_model_path] - Path to the pre-trained model parameters.
         [--config_path] - Path to the model configuration file.
@@ -103,21 +102,19 @@ Results of KDT and the baseline transformers on MDQA and MedQuAD (%)
 
 | Models        | MedQuAD      | MDQA          |
 | :-----        | :----:       | :----:        |
-| BERT-base     | 94.3         | 94.9          |
-| BERT-large    | 98.7         | 98.9          |
-| ALBERT-base   | 85.3         | 87.4          |
-| ALBERT-large  | 88.7         | 90.1          |
-| DistilBERT    | 91.3         | 92.4          |
-| RoBERTa-base  | 96.4         | 96.9          |
-| RoBERTa-large | 97.3         | 97.7          |
-| GPT-2         | 95.3         | 95.8          |
-| GPT-3         | 99.1         | 99.5          |
-| K-BERT        | 99.2         | 99.8          |
-| KDT           | 99.4         | 99.9          |
+| BERT-base     | 92.0         | 92.3          |
+| BERT-large    | 95.3         | 95.7          |
+| ALBERT-base   | 85.6         | 85.6          |
+| ALBERT-large  | 86.6         | 87.9          |
+| DistilBERT    | 89.8         | 89.8          |
+| RoBERTa-base  | 93.7         | 96.9          |
+| RoBERTa-large | 97.3         | 93.8          |
+| GPT-2         | 94.1         | 94.3          |
+| GPT-3         | 98.5         | 98.7          |
+| K-BERT        | 96.8         | 97.5          |
+| KDT           | 99.3         | 99.5          |
 
 
 
 
-## Acknowledgement
 
-This work is a joint study with the support of Peking University and Tencent Inc.
