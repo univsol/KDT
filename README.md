@@ -54,7 +54,7 @@ KDT
 
 Run example on Book review with CnDbpedia:
 ```sh
-CUDA_VISIBLE_DEVICES='0' python3 -u run_bert_cls.py \
+CUDA_VISIBLE_DEVICES='0' python3 -u run_kdt_cls.py \
     --pretrained_model_path ./models/google_model.bin \
     --config_path ./models/google_config.json \
     --vocab_path ./models/google_vocab.txt \
