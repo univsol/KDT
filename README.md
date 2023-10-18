@@ -43,8 +43,8 @@ KDT
 ├── uer
 ├── README.md
 ├── requirements.txt
-├── run_kbert_cls.py
-└── run_kbert_ner.py
+├── run_kdt_cls.py
+└── run_kdt_ner.py
 ```
 
 
@@ -52,7 +52,7 @@ KDT
 
 ### Classification example
 
-Run example on Book review with CnDbpedia:
+Run example on medical with Symptom:
 ```sh
 CUDA_VISIBLE_DEVICES='0' python3 -u run_kdt_cls.py \
     --pretrained_model_path ./models/google_model.bin \
