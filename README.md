@@ -81,6 +81,11 @@ useage: [--pretrained_model_path] - Path to the pre-trained model parameters.
 ```
 
 ## Dataset Splitting
+| Data Set Name | Total Records | Train Data (70%) | Validation Data (20%) | Test Data (10%) |
+|---------------|---------------|-------------------|-----------------------|----------------|
+| MDQA (Mandarin) | 2.6 million | 1,820,000 | 520,000 | 260,000 |
+| MDQA (English) | 1.73 million | 1,211,000 | 346,000 | 173,000 |
+| MedQuAD | 114,000 | 91,200 | 22,800 | 11,400 |
 
 | Dataset Name                  | Total Records | Train Set (70%) | Test Set (20%) | Validation Set (10%)   | Data Source    | 
 |-------------------------------|---------------|------------------|----------------|-------------------------|----------------|
