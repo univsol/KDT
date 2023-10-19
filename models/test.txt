@@ -8,3 +8,5 @@
 | Dataset Name | Total Records | Train Set (70%) | Test Set (20%) | Validation Set (10%)  | Data Source     |
 |--------------|---------------|-----------------|----------------|-----------------------|-----------------|
 | MedQuAD      | 114,000       | 91,200          | 22,800         | 11,400                | [MedQuAD](https://github.com/abachaa/MedQuAD)|
+* Download the ``Symptom.spo`` from [here](https://share.weiyun.com/5BvtHyO), and save it to the ``brain/kgs/`` directory.
+* Optional - Download the datasets for evaluation from [here](https://share.weiyun.com/5Id9PVZ), unzip and place them in the ``datasets/`` directory.
