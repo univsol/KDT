@@ -29,7 +29,7 @@ KDT
 │   │   ├── dev.tsv
 │   │   ├── test.tsv
 │   │   └── train.tsv
-│   ├── chnsenticorp
+│   ├── Mandarin
 │   │   ├── dev.tsv
 │   │   ├── test.tsv
 │   │   └── train.tsv
